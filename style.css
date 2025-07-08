@@ -136,4 +136,255 @@ body {
   flex: 1 1 250px;
   max-width: 300px;
   padding: 20px;
-  border-radius: var(--b
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: 0 0 10px rgba(106, 13, 173, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px var(--color-red);
+}
+
+.feature-box img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.feature-box h3 {
+  margin: 10px 0 8px;
+  color: var(--color-purple);
+  font-weight: 700;
+}
+
+.feature-box p {
+  color: var(--color-text-light);
+}
+
+/* ==== VIDEO SECTION ==== */
+.video {
+  padding: 60px 0;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.video h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: var(--color-purple);
+}
+
+.video-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 0 20px var(--color-purple);
+}
+
+.video-wrapper img,
+.video-wrapper video {
+  width: 100%;
+  display: block;
+}
+
+/* ==== ABOUT SECTION ==== */
+.about {
+  padding: 60px 0;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--color-purple);
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+}
+
+.about img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 15px var(--color-purple);
+  user-select: none;
+}
+
+/* ==== TEAM GRID ==== */
+.team {
+  background-color: var(--color-bg-light);
+  padding: 60px 0;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.team h3 {
+  color: var(--color-purple);
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team-member {
+  background: #2a2a2a;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: 0 0 15px var(--color-purple);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px var(--color-red);
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+.team-member h4 {
+  margin: 0 0 5px;
+  color: var(--color-purple);
+  font-weight: 700;
+}
+
+.team-member p {
+  margin: 0;
+  color: var(--color-text-light);
+}
+
+/* ==== CONTACT FORM ==== */
+.contact {
+  padding: 60px 0;
+  background-color: var(--color-bg-light);
+  color: var(--color-text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  text-align: center;
+  color: var(--color-purple);
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--color-purple);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: var(--border-radius);
+  border: 1.5px solid var(--color-purple);
+  background-color: #222;
+  color: var(--color-text);
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-red);
+  background-color: #2e2e2e;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--color-red);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+  background-color: #cc0029;
+  outline: none;
+}
+
+/* ==== FOOTER ==== */
+.site-footer {
+  background-color: var(--color-purple);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  user-select: none;
+  margin-top: 60px;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.5);
+}
+
+.site-footer nav a {
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.site-footer nav a:hover,
+.site-footer nav a:focus {
+  color: var(--color-red);
+  outline: none;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  .feature-box {
+    max-width: 100%;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
