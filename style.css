@@ -1,230 +1,224 @@
-/* Basisstyles */
+/* ===========================
+   Allgemeine Styles für alle Seiten
+   =========================== */
 body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(180deg, #2c003e 0%, #3c002f 100%);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  padding: 0;
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  flex-wrap: wrap;
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
 }
 
-.logo {
-  height: 50px;
-  width: auto;
-  margin-right: 1rem;
+nav ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #e91e63;
-  flex-grow: 1;
+nav ul li {
+  display: inline;
+  margin: 0 15px;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-nav a {
-  margin-left: 1.5rem;
-  color: white;
+nav ul li a {
   text-decoration: none;
+  color: #ffffff;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #e91e63;
+nav ul li a:hover {
+  color: #e63946;
 }
 
-#toggle-darkmode {
-  margin-left: 1.5rem;
-  background: none;
-  border: none;
-  font-size: 1.3rem;
-  cursor: pointer;
-  color: white;
-  transition: color 0.3s;
-}
-
-#toggle-darkmode:hover {
-  color: #e91e63;
-}
-
-/* Hauptinhalt zentriert */
 main {
-  flex-grow: 1;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
 
-section {
-  padding: 4rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+h1 {
+  color: #ff0033;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(255, 0, 51, 0.8);
 }
 
-.team-member {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  gap: 1rem;
+h2, .hero h2, .text h2 {
+  font-size: 2rem;
+  color: #ff0033;
+  text-shadow: 2px 2px 5px rgba(255, 0, 51, 0.7);
 }
 
-.team-member img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+h3, .Games {
+  text-align: center;
+}
+
+h4 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff0033;
+  text-shadow: 2px 2px 5px rgba(255, 0, 51, 0.7);
+}
+
+img {
+  width: 500px;
+  height: 200px;
   object-fit: cover;
 }
 
-.sponsors {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding-bottom: 3rem;
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
-.sponsors img {
-  max-height: 80px;
-  filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+footer p, footer text {
+  font-size: 0.9rem;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
-  margin: auto;
-}
-
-input, textarea {
-  padding: 0.8rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #000;
-  font-size: 1rem;
-  resize: vertical;
-}
-
-input:focus, textarea:focus {
-  outline: 2px solid #e91e63;
-}
-
-button {
-  background-color: #e91e63;
-  color: white;
-  border: none;
-  padding: 0.8rem;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #c2185b;
-}
-
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
-  header {
-    justify-content: center;
+  .content {
+    flex-direction: column;
   }
 
-  header h1 {
-    margin-top: 0.5rem;
-    text-align: center;
-    flex-basis: 100%;
-  }
-
-  nav {
-    justify-content: center;
-    margin-top: 0.5rem;
+  .image-container,
+  .text {
     width: 100%;
   }
-
-  nav a {
-    margin: 0 0.75rem;
-  }
-
-  main {
-    padding: 0 1rem;
-  }
-
-  .team-member {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .team-member img {
-    margin-bottom: 0.5rem;
-  }
-
-  .sponsors {
-    gap: 1rem;
-  }
 }
 
-/* Darkmode */
-.darkmode {
-  background: linear-gradient(180deg, #1a001f 0%, #2b0018 100%);
-  color: #ddd;
+
+
+/* ===========================
+   Login-Seite
+   =========================== */
+body.login-page {
+  background-image: url("2020_03_Eternity_header-1920x640.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: #ff7171;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.darkmode header {
-  background-color: rgba(20, 20, 20, 0.9);
+.login-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  color: #333;
 }
 
-.darkmode header h1 {
-  color: #ff4081;
+.login-container h1 {
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.darkmode nav a {
-  color: #ddd;
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #333;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.darkmode nav a:hover {
-  color: #ff4081;
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff7171;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.darkmode #toggle-darkmode {
-  color: #ddd;
+.login-button:hover {
+  background-color: #ff5c5c;
 }
 
-.darkmode input, 
-.darkmode textarea {
-  background-color: #333;
-  color: #eee;
+
+
+/* ===========================
+   Games-Seite
+   =========================== */
+
+.Gamesstyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.darkmode input::placeholder,
-.darkmode textarea::placeholder {
-  color: #bbb;
+
+
+/* ===========================
+   Arcane-Seite
+   =========================== */
+
+/* Hero-Sektion */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 51, 0.3),
+    rgba(50, 50, 50, 0.5)
+  );
 }
 
-.darkmode button {
-  background-color: #ff4081;
+.hero img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 0, 51, 0.7);
 }
 
-.darkmode button:hover {
-  background-color: #e040fb;
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+  padding: 20px;
+  background-color: rgba(50, 50, 50, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 0, 51, 0.5);
+}
+
+.content:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.image-container {
+  width: 40%;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 0, 51, 0.7);
+}
+
+.text {
+  width: 60%;
+  padding: 20px;
+}
+
+.text p {
+  font-size: 1.2em;
+  line-height: 1.6;
 }
